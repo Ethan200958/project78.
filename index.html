@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Family Book</title>
+
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body id="body">
+<h1>FAMILY BOOK</h1>
+<img src="" id="album">
+<h1 id="familyNames"></h1>
+<div>
+    <button type="button" onclick="nextslide()">NEXT</button>
+    </div>
+<script>
+var family_array=["Ethan Khan", "Jerome Khan", "Nitzan Khan", "Zaheera Khan"];
+var image_array=["https://www.shareicon.net/data/2016/06/25/786551_people_512x512.png",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCjDENjhTo2hvmK6kLEpkyH2Q1JsT9xFi3Pg&usqp=CAU",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAbaHVF0CQ6Wzyk9KkCdlkLv62ly6jnJsy9A&usqp=CAU",
+"https://i.pinimg.com/736x/f8/a9/dd/f8a9dd5024d6ebed33ae33db724d84e3.jpg"]
+
+var e=0;
+function nextslide() {
+    document.getElementById("familyNames").innerHTML=family_array[e];
+    document.getElementById("album").src = image_array[e];
+    e++
+
+if (e>3) {
+    e=0;
+}
+
+    }
+</script>    
+</body>
+</html>
